@@ -1,0 +1,70 @@
+{% load static %}
+{% load cart_tag %}
+{% cart_length request as cart_len %}
+<head>
+  <link rel="stylesheet" type="text/css" href="{% static 'first/css/style.css' %}">
+  <meta charset="utf-8">
+  {% if cart_len > 0 %}
+    <title>Корзина {% cart_length request %} товара</title>
+  {% else %}
+    <title>Корзина пуста</title>
+  {% endif %}
+</head>
+<header>
+  <nav class="menu">
+    <div class="menu-div">
+      <ul>
+        <li><a href="{% url 'home' %}"><img src="{% static 'first/images/Avatar.png' %}" class="avatar"></a>
+          <div class="info">
+            {% for i in info %}
+              <ul>
+                <li><p>{{i.title}}</p></li>
+              </ul>
+            {% endfor %}
+          </div>
+          <h1 class="number">+7 (981) 125-44-56</h1>
+        </li>
+        <li>
+          <div class="menu-text">
+            {% for m in menu_not_home_page %}
+            {% if m.url == 'food' %}
+              <a href="#{{m.id}}" class="menu-link" style="color: black;" onclick="slowScroll('#{{m.id}}')">{{m.title}}</a>
+            {% else %}
+              <a href="{% url m.url %}" class="menu-link" style="color: black;">{{m.title}}</a>
+            {% endif %}
+            {% endfor %}
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+<body>
+  <h1 class="basket-h1">Корзина</h1>
+  {% if cart_len > 0 %}
+    <a href="{% url 'cart_clear' %}" class="clear-cart" style="color: gray;">Очистить корзину</a>
+    </div>
+    {% for key,value in request.session.cart.items %}  
+    {% if value.quantity != 0 %}
+      <div class="div-food">
+          <a href="{% url 'item_clear' value.product_id %}" class="item_remove" style="color: gray;">x</a>
+          <p class="name">{{value.name}}</p>
+          <p class="price-quantity">{% widthratio value.price 1 value.quantity %}₽ </p>
+          <div class="div-price">
+            <p class="quantity">{{value.quantity}} шт.</p>
+            <a href="{% url 'item_increment' value.product_id %}" class="add" style="color: black;">+</a>
+            <a href="{% url 'item_decrement' value.product_id %}" class="reduce">-</a>
+          </div>
+          <p class="price">{{value.price}}/1 шт.</p>
+          <p><img src='{{value.photo}}' width="150px" class="photo"></p> 
+      </div>
+    {% endif %}
+    {% endfor %}
+    {% if request.session.cart|length > 0 %}
+        <a class="to-checkout" href="{% url 'checkout' %}">К оформлению</a>
+        <p name="total-price" class="total-cart" >Итого: {% order_price request %}</p>
+    {% endif %}
+  {% else %}
+    <p class="cart-is-empty">Корзина пуста</p>
+  {% endif %}
+</body>

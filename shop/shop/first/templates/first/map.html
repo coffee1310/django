@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_c73c2e4b44284f39efb62cee0817211d {
+                    position: toprigth;
+                    width: 950.0px;
+                    height: 550.0px;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_c73c2e4b44284f39efb62cee0817211d" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_c73c2e4b44284f39efb62cee0817211d = L.map(
+                "map_c73c2e4b44284f39efb62cee0817211d",
+                {
+                    center: [55.76766184702502, 37.594135589055654],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 10,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_922e7881e4266504dfc19851837f2d55 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_c73c2e4b44284f39efb62cee0817211d);
+        
+    
+            var marker_1adb00cd2f71e072ab5ad3a3f7098fce = L.marker(
+                [55.75539761094001, 37.61795604341731],
+                {}
+            ).addTo(map_c73c2e4b44284f39efb62cee0817211d);
+        
+    
+        var popup_a6cda1792ad9b689b8254e7c123c8088 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8d5addf66ff5b82e4400eae47579836d = $(`<div id="html_8d5addf66ff5b82e4400eae47579836d" style="width: 100.0%; height: 100.0%;">Мавзолей Ленина</div>`)[0];
+                popup_a6cda1792ad9b689b8254e7c123c8088.setContent(html_8d5addf66ff5b82e4400eae47579836d);
+            
+        
+
+        marker_1adb00cd2f71e072ab5ad3a3f7098fce.bindPopup(popup_a6cda1792ad9b689b8254e7c123c8088)
+        ;
+
+        
+    
+    
+            marker_1adb00cd2f71e072ab5ad3a3f7098fce.bindTooltip(
+                `<div>
+                     Мавзолей Ленина
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6a35c71b338331a4ae62b2c8821be770 = L.marker(
+                [55.77163863385089, 37.64179166339341],
+                {}
+            ).addTo(map_c73c2e4b44284f39efb62cee0817211d);
+        
+    
+        var popup_9380e10a626c052b5a2eb24c83d565de = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f28db63f21265ec068a0c74632a17cc6 = $(`<div id="html_f28db63f21265ec068a0c74632a17cc6" style="width: 100.0%; height: 100.0%;">M.Видео</div>`)[0];
+                popup_9380e10a626c052b5a2eb24c83d565de.setContent(html_f28db63f21265ec068a0c74632a17cc6);
+            
+        
+
+        marker_6a35c71b338331a4ae62b2c8821be770.bindPopup(popup_9380e10a626c052b5a2eb24c83d565de)
+        ;
+
+        
+    
+    
+            marker_6a35c71b338331a4ae62b2c8821be770.bindTooltip(
+                `<div>
+                     M.Видео
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b808b8f63c56dbead4280a6e1bae1ff0 = L.marker(
+                [55.69778019769173, 37.600285043934676],
+                {}
+            ).addTo(map_c73c2e4b44284f39efb62cee0817211d);
+        
+    
+        var popup_913e9f8a29e93977bb43c8626da92181 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7082e54e05b74b8a1b441fa1308fbe58 = $(`<div id="html_7082e54e05b74b8a1b441fa1308fbe58" style="width: 100.0%; height: 100.0%;">ГБУЗ НИКИО им. Л.И. Свержевского ДЗМ</div>`)[0];
+                popup_913e9f8a29e93977bb43c8626da92181.setContent(html_7082e54e05b74b8a1b441fa1308fbe58);
+            
+        
+
+        marker_b808b8f63c56dbead4280a6e1bae1ff0.bindPopup(popup_913e9f8a29e93977bb43c8626da92181)
+        ;
+
+        
+    
+    
+            marker_b808b8f63c56dbead4280a6e1bae1ff0.bindTooltip(
+                `<div>
+                     ГБУЗ НИКИО им. Л.И. Свержевского ДЗМ
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_83e91ed17e19c8fdb97708619da09372 = L.marker(
+                [55.56843828060165, 37.46572415039861],
+                {}
+            ).addTo(map_c73c2e4b44284f39efb62cee0817211d);
+        
+    
+        var popup_43dda16ad26820110256b8ecd603d3ea = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4897a362c130a165dff5cf923c4f68f5 = $(`<div id="html_4897a362c130a165dff5cf923c4f68f5" style="width: 100.0%; height: 100.0%;">Городская клиническая больница №40</div>`)[0];
+                popup_43dda16ad26820110256b8ecd603d3ea.setContent(html_4897a362c130a165dff5cf923c4f68f5);
+            
+        
+
+        marker_83e91ed17e19c8fdb97708619da09372.bindPopup(popup_43dda16ad26820110256b8ecd603d3ea)
+        ;
+
+        
+    
+    
+            marker_83e91ed17e19c8fdb97708619da09372.bindTooltip(
+                `<div>
+                     Городская клиническая больница №40
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_bd6dbb5da40b54e08eeb3ad5d36671d2 = L.marker(
+                [55.75643781261594, 37.54146936004568],
+                {}
+            ).addTo(map_c73c2e4b44284f39efb62cee0817211d);
+        
+    
+        var popup_8d2a15b399ee97da10e8074e8014f095 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6e58d05de0ee56df800d8fc0cd8656ba = $(`<div id="html_6e58d05de0ee56df800d8fc0cd8656ba" style="width: 100.0%; height: 100.0%;">ДГКБ №9 им. Г. Н. Сперанского</div>`)[0];
+                popup_8d2a15b399ee97da10e8074e8014f095.setContent(html_6e58d05de0ee56df800d8fc0cd8656ba);
+            
+        
+
+        marker_bd6dbb5da40b54e08eeb3ad5d36671d2.bindPopup(popup_8d2a15b399ee97da10e8074e8014f095)
+        ;
+
+        
+    
+    
+            marker_bd6dbb5da40b54e08eeb3ad5d36671d2.bindTooltip(
+                `<div>
+                     ДГКБ №9 им. Г. Н. Сперанского
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_dfdeb8cd29caeda11b234493745d40ed = L.marker(
+                [55.793124016621405, 37.38832204605409],
+                {}
+            ).addTo(map_c73c2e4b44284f39efb62cee0817211d);
+        
+    
+        var popup_c02b59d4e8a61d89958de249705ed722 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a8dc13bf64b6fde4f8f0b974d1fc8c64 = $(`<div id="html_a8dc13bf64b6fde4f8f0b974d1fc8c64" style="width: 100.0%; height: 100.0%;">METRO Cash & Carry</div>`)[0];
+                popup_c02b59d4e8a61d89958de249705ed722.setContent(html_a8dc13bf64b6fde4f8f0b974d1fc8c64);
+            
+        
+
+        marker_dfdeb8cd29caeda11b234493745d40ed.bindPopup(popup_c02b59d4e8a61d89958de249705ed722)
+        ;
+
+        
+    
+    
+            marker_dfdeb8cd29caeda11b234493745d40ed.bindTooltip(
+                `<div>
+                     METRO Cash & Carry
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ab07fb5eec1844ef39f0fbd5ac56bf03 = L.marker(
+                [55.84485024241855, 37.383660384180686],
+                {}
+            ).addTo(map_c73c2e4b44284f39efb62cee0817211d);
+        
+    
+        var popup_69beb00e97e08f92d85029bb397d1f45 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_934b7d98a449572414695d0d64735c6a = $(`<div id="html_934b7d98a449572414695d0d64735c6a" style="width: 100.0%; height: 100.0%;">ТЦ Митинский радиорынок</div>`)[0];
+                popup_69beb00e97e08f92d85029bb397d1f45.setContent(html_934b7d98a449572414695d0d64735c6a);
+            
+        
+
+        marker_ab07fb5eec1844ef39f0fbd5ac56bf03.bindPopup(popup_69beb00e97e08f92d85029bb397d1f45)
+        ;
+
+        
+    
+    
+            marker_ab07fb5eec1844ef39f0fbd5ac56bf03.bindTooltip(
+                `<div>
+                     ТЦ Митинский радиорынок
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_135d9cf257337d2c07d88bb17096c6e3 = L.marker(
+                [55.890240570394155, 37.5378818347221],
+                {}
+            ).addTo(map_c73c2e4b44284f39efb62cee0817211d);
+        
+    
+        var popup_0b9fd0def7d02e600fe3ad720ad5a6df = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0a38a5fbbe90a56d0975b1c5d7fae7c8 = $(`<div id="html_0a38a5fbbe90a56d0975b1c5d7fae7c8" style="width: 100.0%; height: 100.0%;">ТРЦ Зиг-Заг</div>`)[0];
+                popup_0b9fd0def7d02e600fe3ad720ad5a6df.setContent(html_0a38a5fbbe90a56d0975b1c5d7fae7c8);
+            
+        
+
+        marker_135d9cf257337d2c07d88bb17096c6e3.bindPopup(popup_0b9fd0def7d02e600fe3ad720ad5a6df)
+        ;
+
+        
+    
+    
+            marker_135d9cf257337d2c07d88bb17096c6e3.bindTooltip(
+                `<div>
+                     Мавзолей Ленина
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c08e28204dd71e4aaae0b574030272e3 = L.marker(
+                [55.91913120624165, 37.755883857201425],
+                {}
+            ).addTo(map_c73c2e4b44284f39efb62cee0817211d);
+        
+    
+        var popup_b66f74a2eb0e5fc9545d4b4666aa2b25 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e2cc7b58274fdb6a515a7e756ae639ab = $(`<div id="html_e2cc7b58274fdb6a515a7e756ae639ab" style="width: 100.0%; height: 100.0%;">ТРК Красный кит</div>`)[0];
+                popup_b66f74a2eb0e5fc9545d4b4666aa2b25.setContent(html_e2cc7b58274fdb6a515a7e756ae639ab);
+            
+        
+
+        marker_c08e28204dd71e4aaae0b574030272e3.bindPopup(popup_b66f74a2eb0e5fc9545d4b4666aa2b25)
+        ;
+
+        
+    
+    
+            marker_c08e28204dd71e4aaae0b574030272e3.bindTooltip(
+                `<div>
+                     ТРК Красный кит
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d14606cc96777bc5aa4ca2eb03956c7d = L.marker(
+                [55.751497418752216, 37.618492737420084],
+                {}
+            ).addTo(map_c73c2e4b44284f39efb62cee0817211d);
+        
+    
+        var popup_e6b7b85f88eda5f5ef04062d7299f428 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8fa993336b4dbc68b7f7a9699637d898 = $(`<div id="html_8fa993336b4dbc68b7f7a9699637d898" style="width: 100.0%; height: 100.0%;">Боровицкая площадь</div>`)[0];
+                popup_e6b7b85f88eda5f5ef04062d7299f428.setContent(html_8fa993336b4dbc68b7f7a9699637d898);
+            
+        
+
+        marker_d14606cc96777bc5aa4ca2eb03956c7d.bindPopup(popup_e6b7b85f88eda5f5ef04062d7299f428)
+        ;
+
+        
+    
+    
+            marker_d14606cc96777bc5aa4ca2eb03956c7d.bindTooltip(
+                `<div>
+                     Боровицкая площадь
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_87b38a9744c07966d14ca4c93581b092 = L.marker(
+                [55.72039801865527, 37.626929456519555],
+                {}
+            ).addTo(map_c73c2e4b44284f39efb62cee0817211d);
+        
+    
+        var popup_7f26cb75a906c9cf4e297605003b029d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6dbef3468ad1fc5d1c914edaf52ed2e2 = $(`<div id="html_6dbef3468ad1fc5d1c914edaf52ed2e2" style="width: 100.0%; height: 100.0%;">Театр Терезы Дуровой</div>`)[0];
+                popup_7f26cb75a906c9cf4e297605003b029d.setContent(html_6dbef3468ad1fc5d1c914edaf52ed2e2);
+            
+        
+
+        marker_87b38a9744c07966d14ca4c93581b092.bindPopup(popup_7f26cb75a906c9cf4e297605003b029d)
+        ;
+
+        
+    
+    
+            marker_87b38a9744c07966d14ca4c93581b092.bindTooltip(
+                `<div>
+                     Театр Терезы Дуровой
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2a83f7313874f3d57fcefa987bf138e8 = L.marker(
+                [55.740480698759605, 37.6716776367469],
+                {}
+            ).addTo(map_c73c2e4b44284f39efb62cee0817211d);
+        
+    
+        var popup_f2e0826f899aa2e053bcb12b3093fb8c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_690ffb63802aba56c63bee36ca2a59b0 = $(`<div id="html_690ffb63802aba56c63bee36ca2a59b0" style="width: 100.0%; height: 100.0%;">Мощи святой Матроны</div>`)[0];
+                popup_f2e0826f899aa2e053bcb12b3093fb8c.setContent(html_690ffb63802aba56c63bee36ca2a59b0);
+            
+        
+
+        marker_2a83f7313874f3d57fcefa987bf138e8.bindPopup(popup_f2e0826f899aa2e053bcb12b3093fb8c)
+        ;
+
+        
+    
+    
+            marker_2a83f7313874f3d57fcefa987bf138e8.bindTooltip(
+                `<div>
+                     Мощи святой Матроны
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_56be5f40aa12ac5dc3a5ec85c78fab32 = L.marker(
+                [55.73774733998668, 37.716103786488254],
+                {}
+            ).addTo(map_c73c2e4b44284f39efb62cee0817211d);
+        
+    
+        var popup_571ad672a652ac3eb1848ef42497b7eb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d9dba3fa516be1d29a63f6458a414fc4 = $(`<div id="html_d9dba3fa516be1d29a63f6458a414fc4" style="width: 100.0%; height: 100.0%;">Do A Flip</div>`)[0];
+                popup_571ad672a652ac3eb1848ef42497b7eb.setContent(html_d9dba3fa516be1d29a63f6458a414fc4);
+            
+        
+
+        marker_56be5f40aa12ac5dc3a5ec85c78fab32.bindPopup(popup_571ad672a652ac3eb1848ef42497b7eb)
+        ;
+
+        
+    
+    
+            marker_56be5f40aa12ac5dc3a5ec85c78fab32.bindTooltip(
+                `<div>
+                     Do A Flip
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_66782f8ca65b19be16c4cb2975a14f02 = L.marker(
+                [55.7939162900569, 37.676828293772154],
+                {}
+            ).addTo(map_c73c2e4b44284f39efb62cee0817211d);
+        
+    
+        var popup_475763daaaf02e2b1004fa6a9dffd8df = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9c16083160c44281a0f09e60eae42854 = $(`<div id="html_9c16083160c44281a0f09e60eae42854" style="width: 100.0%; height: 100.0%;">Батутный центр JUSTUP!</div>`)[0];
+                popup_475763daaaf02e2b1004fa6a9dffd8df.setContent(html_9c16083160c44281a0f09e60eae42854);
+            
+        
+
+        marker_66782f8ca65b19be16c4cb2975a14f02.bindPopup(popup_475763daaaf02e2b1004fa6a9dffd8df)
+        ;
+
+        
+    
+    
+            marker_66782f8ca65b19be16c4cb2975a14f02.bindTooltip(
+                `<div>
+                     Батутный центр JUSTUP!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_4e2069e937be266116950c8b0579ffea = L.circle(
+                [55.76766184702502, 37.594135589055654],
+                {"bubblingMouseEvents": true, "color": "#3186cc", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3186cc", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 25000, "stroke": true, "weight": 3}
+            ).addTo(map_c73c2e4b44284f39efb62cee0817211d);
+        
+    
+        var popup_01568c3fe86c5634e2d4c561a94356fc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8a9a8a07749240e68ffeeb8866559026 = $(`<div id="html_8a9a8a07749240e68ffeeb8866559026" style="width: 100.0%; height: 100.0%;">Наши магазины</div>`)[0];
+                popup_01568c3fe86c5634e2d4c561a94356fc.setContent(html_8a9a8a07749240e68ffeeb8866559026);
+            
+        
+
+        circle_4e2069e937be266116950c8b0579ffea.bindPopup(popup_01568c3fe86c5634e2d4c561a94356fc)
+        ;
+
+        
+    
+</script>
+</html>

@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<head>
+  <link rel="stylesheet" type="text/css" href="{% static 'first/css/style.css' %}">
+  <meta charset="utf-8">
+</head>
+<header>
+  <nav class="menu">
+    <div class="menu-div">
+      <ul>
+        <li><a href="{% url 'home' %}"><img src="{% static 'first/images/Avatar.png' %}" class="avatar"></a>
+          <div class="info">
+            {% for i in info %}
+              <ul>
+                <li><p>{{i.title}}</p></li>
+              </ul>
+            {% endfor %}
+          </div>
+          <h1 class="number">+7 (981) 125-44-56</h1>
+        </li>
+        <li>
+          <div class="menu-text">
+            {% for m in menu %}
+              <span class="span-menu"><a href="{% url m.url %}" class="menu-link" style="color: black;">{{m.title}}</a></span>
+            {% endfor %}
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+<body>
+	<p class="thank-you">Спасибо!</p>
+	<p id="countdown" class="back-after">Страница закроется через 5</p>
+	<script type="text/javascript" src="{% static 'first/js/time.js' %}"></script>
+</body>

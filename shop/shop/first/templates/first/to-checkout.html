@@ -1,0 +1,56 @@
+{% load static %}
+<head>
+	<link rel="stylesheet" type="text/css" href="{% static 'first/css/style.css' %}">
+	<meta charset="utf-8">
+	<title>Главная страница</title>
+</head>
+<header>
+	<nav class="menu">
+		<div class="menu-div">
+			<ul>
+				<li><a href="{% url 'home' %}"><img src="{% static 'first/images/Avatar.png' %}" class="avatar"></a>
+					<div class="info">
+						{% for i in info %}
+							<ul>
+								<li><p>{{i.title}}</p></li>
+							</ul>
+						{% endfor %}
+					</div>
+					<h1 class="number">+7 (981) 125-44-56</h1>
+				</li>
+				<li>
+					<div class="menu-text">
+						{% for m in menu_not_home_page %}
+						{% if m.url == 'food' %}
+							<a href="#{{m.id}}" class="menu-link" style="color: black;" onclick="slowScroll('#{{m.id}}')">{{m.title}}</a>
+						{% else %}
+							<a href="{% url m.url %}" class="menu-link" style="color: black;">{{m.title}}</a>
+						{% endif %}
+						{% endfor %}
+							<a href="{% url 'cart_detail' %}"><img src="{% static 'first/images/basket.png' %}" class="basket"></a>
+							{% if cart_len > 0 %}
+								<p class="item-count"></p>
+							{% endif %}
+					</div>
+				</li>
+			</ul>
+		</div>
+	</nav>
+</header>
+<body>
+	<h1 class="order-information">Оформление заказа</h1>
+	<form class="add-order", method="post">
+		{% csrf_token %}
+		<p class="adress-order"><label class="form-label" for="{{ form.adress.id_for_label }}">{{form.adress.label}}: </label>{{ form.adress }}</p>
+		<div class="form-error">{{ form.errors }}</div>
+		<p class="name-order"><label class="form-label" for="{{ form.custome_name.id_for_label }}">{{form.customer_name.label}}: </label>{{ form.customer_name }}</p>
+		<div class="form-error">{{ form.errors }}</div>
+		<p class="phone-order"><label class="form-label" for="{{ form.custome_phone.id_for_label }}">{{form.customer_phone.label}}: </label>{{ form.customer_phone }}</p>
+		<div class="form-error">{{ form.errors }}</div>
+		<p class="comment-order"><label class="form-label" for="{{ form.comments.id_for_label }}">{{form.comments.label}}: </label>{{ form.comments }}</p>
+		<div class="form-error">{{ form.errors }}</div>
+		<p class="email-order"><label class="form-label" for="{{ form.email.id_for_label }}">{{form.email.label}}: </label>{{ form.email }}</p>
+		<div class="form-error">{{ form.errors }}</div>
+		<button type="submit" class="btn-add">Подтвердить</button>
+	</form>
+</body>

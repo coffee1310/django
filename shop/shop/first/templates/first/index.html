@@ -1,0 +1,98 @@
+{% load static %}
+{% load cart_tag %}
+{% cart_length request as cart_len %}
+<!DOCTYPE html>
+
+<head>
+
+	<link rel="stylesheet" type="text/css" href="{% static 'first/css/style.css' %}">
+	<script type="text/javascript" src="{% static 'first/js/JQuery.min.js' %}"></script>
+	<title>Главная страница</title>
+	<script type="text/javascript"></script>
+</head>
+
+<header>
+	<nav class="menu">
+		<div class="menu-div">
+			<ul>
+				<li><a href="{% url 'home' %}"><img src="{% static 'first/images/Avatar.png' %}" class="avatar"></a>
+					<div class="info">
+						{% for i in info %}
+							<ul>
+								<li><p>{{i.title}}</p></li>
+							</ul>
+						{% endfor %}
+					</div>
+					<h1 class="number">+7 (981) 125-44-56</h1>
+				</li>
+				<li>
+					<div class="menu-text">
+						{% for c in cat %}
+							<a href="#{{c.id}}" class="menu-link" style="color: black;" onclick="slowScroll('#{{c.id}}')">{{c.cat}}</a>
+							
+						{% endfor %}
+						{% for m in menu %}
+						{% if m.url == 'food' %}
+							<a href="#{{m.id}}" class="menu-link" style="color: black;" onclick="slowScroll('#{{m.id}}')">{{m.title}}</a>
+						{% else %}
+							<a href="{% url m.url %}" class="menu-link" style="color: black;">{{m.title}}</a>
+						{% endif %}
+						{% endfor %}
+							<a href="{% url 'cart_detail' %}"><img src="{% static 'first/images/basket.png' %}" class="basket"></a>
+							{% if cart_len > 0 %}
+								<a class="item-count">{% cart_length request %}<a>
+							{% endif %}
+					</div>
+				</li>
+			</ul>
+		</div>
+	</nav>
+</header>
+<body>
+	<div class="food">
+		{% for c in cat %}
+		{% if c.id != 3 %}
+			<h1 class="pizza" id="{{c.id}}">{{c.cat}}</h1>
+		{% else %}
+			<h1 class="pizza" id="{{c.id}}" style="margin-left: 20%">{{c.cat}}</h1>
+		{% endif %}
+				<div class="element-food">
+					{% for p in posts %}
+						{% if c.id == p.cat_id %}
+						<div class="div-element">
+							{% if p.photo %}
+								<p><img src="{{p.photo.url}}" width="250px" height="250px"></p>
+								{% if p.description %}
+								<p class="food-description">{{p.description|truncatechars:94}}</p>
+							{% endif %}
+							{% endif %}
+							{% if c.id != 3 %}
+								<p href="#" class="food-name">{{p.cat}} {{p.name}}</p>
+							{% else %}
+								<p href="#" class="food-name">{{p.name}}</p>
+							{% endif %}
+							<p class="food-price">{% food_price request p.id %}₽</p>
+							<p class="food-price">{{value.price}}</p>
+							<p class="food-quantity">{% count1 p.id request %}</p>
+							{% if p.weight %}
+								<p class="food-weight">{{p.weight}} г</p>
+							{% endif %}
+							<a href="{% url 'count_decrement' p.id %}" class="decrement-to-cart">-</a>
+							<a href="{% url 'count_add' p.id %}" class="add-cart" >+</a>
+							<a href="{% url 'cart_add' p.id %}" class="add-to-cart" >В корзину</a>
+						</div>
+						{% endif %}
+					{% endfor %}
+				{% endfor %}
+			</div>
+	</div>
+	<script type="text/javascript"> 
+     function slowScroll(id) { 
+         var offset = 0;
+         $('html, body').animate({ 
+              scrollTop: $(id).offset().top - offset 
+         }, 1000);
+         return false; 
+     } 
+</script>
+</body>

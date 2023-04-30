@@ -1,0 +1,462 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+/*Обнуление*/
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+
+
+a.text:active, /* активная/посещенная ссылка */
+a.text:hover,  	/* при наведении */
+a.text {
+  text-decoration: none;
+  color: #666;
+}
+html{
+	font-family: "PT Serif";
+}
+body{
+	background:url(../images/white.jpg), url(../images/background.jpg);
+	background-size: 75% 100%, 30%;
+	background-position-x: 50%, 100%;
+	background-position-y: 200px, %;
+	background-repeat: no-repeat,repeat;
+	background-attachment: fixed, scroll;
+}
+h1{
+	text-align: center;
+	font-size: 40px;
+	margin-top: 15%;
+	margin-right: 10%;
+}
+header{
+	width: 100%;
+	background-color: white;
+	height: 18%;
+	max-height: 200px;
+	box-shadow: 0px 0px 15px 0px #927255;
+}
+.food{
+	margin-top: -10%;
+	margin-left: 10%;
+}
+.menu-div{
+	margin-left: 20%;
+}
+.menu-link{	
+	font-size: 20px;
+	font-size: 150%;
+	margin-left: 2%;
+}
+.basket{
+	width: 1.5%;
+	margin-left:2%;
+	margin-top: -0.5%;
+	z-index: 1;
+}
+.avatar{
+	width: 7%;
+	transition: 0.5s;
+}
+.avatar:hover{
+	transition: 0.5s;
+	transform: scale(1.1, 1.1);
+}
+.lorem1{
+	font-size: 40px;
+}
+.number{
+	position: absolute;
+ 	margin-top: -3%;
+	margin-left: 25%;
+	margin-right: 25%;
+	font-size: 200%;
+}
+.menu-text{
+	margin-top: 1%;
+	margin-left: -20%;
+	text-align: center;
+}
+.info{
+	display: inline-block;
+	margin-top: 1.5%;
+	margin-left: 1%;
+	font-size: 100%;
+}
+.element-food{
+	margin-top: -8%;
+	margin-bottom: 5%;
+	display: inline-block;
+}
+.div-element{
+	text-align: center;
+	margin-left: 100px;
+	margin-top: 200px;
+	display: inline-block;
+}
+.food-name{
+	max-width: 90%;
+	text-align: center;
+	box-align: center;
+	font-size: 20px;
+	font-weight: bold;
+	color: black;
+}
+.food-price{
+	position: absolute;
+	font-size: 20px;
+	font-weight: bold;
+	margin-top: 40px;
+	margin-left: 150px;
+}
+.food-weight{
+	margin-left: 150px;
+	margin-top: 20px;
+	position: absolute;
+}
+.in-the-basket{
+	font-size: 20px;
+	border: 1px solid #eb9b2c;
+	width: 15%;
+	border-radius: 3px;
+	transition: 0.5s;
+	height: 40px;
+	margin-top: 1%;
+}
+.in-the-basket:hover{
+	background-color: ;
+	transition: 0.2s;
+	color: white;
+}
+.food-count{
+	border: solid red 1px;
+	width: 5%;
+	font-size: 20px;
+}
+
+.folium-map{
+		margin-left: auto;
+    margin-right: auto;
+    border: solid 3px black;
+}
+.about-us{
+	margin-left: 20%;
+	font-size: 20px;
+	margin-right: 20%;
+}
+.name{
+	margin-left: 30%;
+	position: absolute;
+	margin-top: 1%;
+	font-size: 20px;
+}
+.price-quantity{
+	margin-top: 1%;
+	margin-left: 50%;
+	position: absolute;
+	font-size: 20px;
+}
+.quantity{
+	font-size: 20px;
+	margin-left: 30%;
+	margin-top: 5%;
+	position: absolute;
+}
+.price{
+	margin-left: 30%;
+	font-size: 20px;
+	position: absolute;
+	margin-top: 3%;
+}
+.photo{
+	margin-left: 20%;
+}
+.add{
+	margin-left: 33%;
+	position: absolute;
+	margin-top: 5%;
+	font-size: 20px;
+}
+.reduce{
+	margin-left: 29%;
+	position: absolute;
+	margin-top: 5%;
+	font-size: 20px;
+}
+.item_remove{
+	font-size: 20px;
+	margin-left: 20%;
+	position: absolute;
+}
+.item-count{
+	font-size: 100%;
+	color: white;
+	border:2px solid  red;
+	border-radius: 50%;
+	background-color: red;
+	padding-left: 0.4%;
+	padding-right: 0.4%;
+	padding-top: 0.2%;
+	padding-bottom: 0.2%;
+	z-index: 2;
+	position: absolute;
+	margin-left: -1%;
+	margin-top: 0.3%;
+}
+.clear-cart{
+	font-size: 15px;
+	position: absolute;
+	text-align: center;
+	margin-left: 60%;
+	top: 24%;
+	text-decoration: underline dotted;
+	color: gray;
+}
+.session-length{
+	font-size: 20px;
+	position: absolute;
+	margin-left: 20%;
+}
+.div-food{
+	margin-top: 3%;
+}
+.add-to-cart{
+	margin-top: 80px;
+	position: absolute;
+	margin-left: -125px;
+	font-size: 15px;
+	border: 1px solid #eb9b2c;
+	border-radius: 5px;
+	width: 250px;
+	height: 40px;
+	padding-top: 10px;
+	text-align: center;
+	color: #eb9b2c;
+	transition: 0.5s;
+}
+.add-to-cart:hover{
+	color: white;
+	transition: 0.5s;
+	background-color: #eb9b2c;
+}
+.food-description{
+	background-color: white;
+	text-align: center;
+	transition: 0.5s;
+	position: absolute;
+	margin-top: -250px;
+	padding-top: 5%;
+	width: 250px;
+	height: 250px;
+	opacity: 0;
+}
+.food-description:hover{
+	opacity: 1;
+	background-color: rgb(256, 256, 256, 0.8);
+}
+.total-cart{
+	
+}
+.to-checkout{
+	position: absolute;
+	margin-left: 20%;
+	margin-top: 5%;
+	font-size: 20px;
+	border: 3px solid red;
+	border-radius: 5px;
+	background-color: red;
+	color: white;
+	text-align: center;
+	height: 5%;
+	width: 20%;
+	padding-top: 0.5%;
+}
+.to-checkout:hover{
+
+}
+.add-order{
+	margin-left: 25%;
+	margin-top: 5%;
+}
+.adress{
+	font-size: 20px;
+	border: 1px solid silver;
+	width: 25%;
+	height: 5%;
+	border-radius: 5px;
+	margin-left: 207px;
+}
+.adress-order{
+	color: silver;
+	font-size: 15px;
+}
+.customer-name{
+	font-size: 20px;
+	border: 1px solid silver;
+	width: 25%;
+	height: 5%;
+	border-radius: 5px;
+	margin-left: 180px;
+	margin-top: 1%;
+}
+.name-order{
+	color: silver;
+	font-size: 15px;
+}
+.phone{
+	font-size: 20px;
+	border: 1px solid silver;
+	width: 25%;
+	height: 5%;
+	border-radius: 5px;
+	margin-left: 140px;
+	margin-top: 1%;
+}
+.comments{
+	font-size: 20px;
+	border: 1px solid silver;
+	width: 25%;
+	height: 10%;
+	border-radius: 5px;
+	margin-left: 100px;
+	margin-top: 1%;
+	resize: none;
+}
+.customer-email{
+	font-size: 20px;
+	border: 1px solid silver;
+	width: 25%;
+	height: 5%;
+	border-radius: 5px;
+	margin-left: 212px;
+	margin-top: 1%;i
+}
+.email-order{}
+.add-cart{
+	transition: 0.2s;
+	border-top: 2px solid #eb9b2c;
+	border-bottom: 2px solid #eb9b2c;
+	border-right: 2px solid #eb9b2c;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius:5px ;
+	width: 35px;
+	height: 35px;
+	margin-left: -40px;
+	font-size: 25px;
+	position: absolute;
+	color: black;
+	position: absolute;
+	margin-top: 30px;
+}
+.btn-add{
+	font-size: ;
+}
+.add-cart:hover{
+	transition: 0.2s;
+	color: white;
+	background-color: #eb9b2c;
+}
+.decrement-to-cart{
+	transition: 0.2s;
+	font-size: 25px;
+	text-align: center;
+	width: 35px;
+	height: 35px;
+	border-top: 2px solid #eb9b2c;
+	border-bottom: 2px solid #eb9b2c;
+	border-left: 2px solid #eb9b2c;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	margin-top: 30px;
+	position: absolute;
+	color: black;
+	margin-left: -120px;
+}
+.decrement-to-cart:hover{
+	transition: 0.2s;
+	color: white;
+	background-color: #eb9b2c;
+}
+.food-quantity{
+	border-top: 2px solid #eb9b2c;
+	border-bottom: 2px solid #eb9b2c;
+	font-size: 20px;
+	margin-top: 30px;
+	margin-left: -85px;
+	width: 45px;
+	height: 35px;
+	padding-top: 2.6px;
+	position: absolute;
+	display: inline-block;
+}
+.count{
+	margin-left: 15%;
+	display: inline-block;
+}
+.count-food{
+	margin-left:1%;
+}
+.cart-is-empty{
+	text-align: center;
+	margin-top: 5%;
+	color: gray;
+	font-size:  25px;
+}
+.basket-h1{
+	margin-top: 2.5%;
+	margin-left: 10%;
+}
+.go-to-the-home-page{
+	text-align: center;
+	margin-top: 5%;
+}
+.thank-you{
+	margin-top: 15%;
+	text-align: center;
+	font-size: 50px;
+	font-weight: bold;
+	color: #eb9b2c
+}
+.back-after{
+	margin-top: 2%;
+	text-align: center;
+	font-size: 30px;
+	font-weight: bold;
+	color: #eb9b2c;
+}
+.order-information{
+	margin-left: 10%;
+	margin-top: 5%;
+}
